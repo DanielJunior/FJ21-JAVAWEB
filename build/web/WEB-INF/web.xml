@@ -32,4 +32,13 @@
     <welcome-file-list>
         <welcome-file>bemvindo.jsp</welcome-file>
     </welcome-file-list>
+    
+    <servlet>
+        <servlet-name>controlador</servlet-name>
+        <servlet-class>mvc.servlet.ControllerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>controlador</servlet-name>
+        <url-pattern>/mvc</url-pattern>
+    </servlet-mapping>
 </web-app>
