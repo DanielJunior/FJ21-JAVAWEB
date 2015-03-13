@@ -15,8 +15,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import modelos.Contato;
 
 /**
@@ -31,21 +29,22 @@ public class ContatoDao {
         connection = new ConnectionFactory().getConnection();
     }
 
+    public ContatoDao(Connection connection) {
+        this.connection = connection;
+    }
+
     public void adiciona(Contato contato) {
         String sql = " insert into contatos"
                 + "(nome,email,endereco,dataNascimento)"
                 + "values (?,?,?,?)";
-        try {
-            PreparedStatement stmt = connection.prepareStatement(sql);
 
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setString(1, contato.getNome());
             stmt.setString(2, contato.getEmail());
             stmt.setString(3, contato.getEndereco());
             stmt.setDate(4, new Date(contato.getDataNascimento().getTimeInMillis()));
 
             stmt.execute();
-            stmt.close();
-
         } catch (SQLException e) {
             throw new DAOException(e);
         }
@@ -76,8 +75,9 @@ public class ContatoDao {
         }
     }
 
-    public Contato pesquisar(int id) {
+    public Contato pesquisar(long id) {
         try {
+            System.out.println(id);
             PreparedStatement stmt = connection.prepareStatement("select * from contatos where id=?");
             stmt.setLong(1, id);
             ResultSet rs = stmt.executeQuery();

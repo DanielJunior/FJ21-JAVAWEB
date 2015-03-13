@@ -7,6 +7,7 @@ package mvc.logica;
 
 import dao.ContatoDao;
 import java.sql.Connection;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -19,27 +20,30 @@ import modelos.Contato;
  *
  * @author danieljr
  */
-public class AlteraContatoLogic implements Logica {
+public class AdicionaContatoLogic implements Logica {
 
     @Override
     public String executa(HttpServletRequest request, HttpServletResponse res) throws Exception {
+        String nome = request.getParameter("nome");
+        String email = request.getParameter("email");
+        String endereco = request.getParameter("endereco");
+        String dataEmTexto = request.getParameter("dataNascimento");
+        Calendar dataNascimento = null;
+        try {
+            Date date = (Date) new SimpleDateFormat("dd/MM/yyyy").parse(dataEmTexto);
+            dataNascimento = Calendar.getInstance();
+            dataNascimento.setTime(date);
+        } catch (ParseException e) {
+            return "erro.html";
+        }
         Contato contato = new Contato();
-        String id = request.getParameter("id");
-        contato.setId(Long.parseLong(id));
-        contato.setNome(request.getParameter("nome"));
-        contato.setEndereco(request
-                .getParameter("endereco"));
-        contato.setEmail(request.getParameter("email"));
-        //Converte a data de String para Calendar
-        String dataEmTexto = request
-                .getParameter("dataNascimento");
-        Date date = new SimpleDateFormat("dd/MM/yyyy")
-                .parse(dataEmTexto);
-        Calendar dataNascimento = Calendar.getInstance();
-        dataNascimento.setTime(date);
+        contato.setNome(nome);
+        contato.setEmail(email);
+        contato.setEndereco(endereco);
         contato.setDataNascimento(dataNascimento);
+
         ContatoDao db = new ContatoDao((Connection) request.getAttribute("conexao"));
-        db.alterar(contato);
+        db.adiciona(contato);
         return new ListaContatosLogic().executa(request, res);
 
     }

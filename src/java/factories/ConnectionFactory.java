@@ -18,7 +18,7 @@ public class ConnectionFactory {
     public Connection getConnection() {
         try {
             DriverManager.registerDriver(new com.mysql.jdbc.Driver());
-            return DriverManager.getConnection("jdbc:mysql://localhost/fj21", "root", "Luana1609");
+            return DriverManager.getConnection("jdbc:mysql://localhost/fj21", "root", "tzzk7662");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

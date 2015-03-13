@@ -19,13 +19,13 @@
         <c:import url="cabecalho.jsp"/>
         Formulário para alteração de contatos:<br/>
         <form action="mvc">
-            Id: <input name="id"><br/>
-            Nome: <input name="nome"><br/>
-            E-mail: <input name="email"><br/>
-            Endereço: <input type="text" name="endereco"><br/>
+            Nome: <input name="nome" value="${contato.getNome()}"><br/>
+            E-mail: <input name="email" value="${contato.getEmail()}"><br/>
+            Endereço: <input type="text" name="endereco" value="${contato.getEndereco()}"><br/>
             Data de Nascimento: <caelum:campoData id="dataNascimento"/>
-            <input type="hidden" name="logica" value="AlteraContatoLogic
-                   "
+            <input type="hidden" name="logica" value="AlteraContatoLogic"/><br/>
+            <input type="hidden" name="id" value="${contato.getId()}"/><br/>
+            <input type="submit" value="Alterar"/>
         </form>
         <c:import url="rodape.jsp"/>
     </body>

@@ -10,10 +10,13 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author danieljunior
+ * @author danieljr
  */
-public interface Logica {
+public class AdicionaContato implements Logica {
 
-     String executa(HttpServletRequest req, HttpServletResponse res) throws Exception;
+    @Override
+    public String executa(HttpServletRequest req, HttpServletResponse res) throws Exception {
+        return "adiciona-contato.jsp";
+    }
 
 }

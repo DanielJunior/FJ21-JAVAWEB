@@ -3,19 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/danieljunior/NetBeansProjects/fj21-agenda/web/cabecalho.jsp</file>
-            <file>file:/home/danieljunior/NetBeansProjects/fj21-agenda/web/contato-adicionado.jsp</file>
-            <file>file:/home/danieljunior/NetBeansProjects/fj21-agenda/web/altera-contato.jsp</file>
-            <file>file:/home/danieljunior/NetBeansProjects/fj21-agenda/src/java/servlet/AdicionaContatoServlet.java</file>
-            <file>file:/home/danieljunior/NetBeansProjects/fj21-agenda/web/lista-contatos-elegante.jsp</file>
-            <file>file:/home/danieljunior/NetBeansProjects/fj21-agenda/web/rodape.jsp</file>
-            <file>file:/home/danieljunior/NetBeansProjects/fj21-agenda/src/java/mvc/logica/Logica.java</file>
-            <file>file:/home/danieljunior/NetBeansProjects/fj21-agenda/web/adiciona-contato.jsp</file>
-            <file>file:/home/danieljunior/NetBeansProjects/fj21-agenda/web/primeira-logica.jsp</file>
-            <file>file:/home/danieljunior/NetBeansProjects/fj21-agenda/src/java/mvc/logica/AlteraContatoLogic.java</file>
-            <file>file:/home/danieljunior/NetBeansProjects/fj21-agenda/src/java/mvc/logica/PrimeiraLogica.java</file>
-            <file>file:/home/danieljunior/NetBeansProjects/fj21-agenda/web/WEB-INF/web.xml</file>
-            <file>file:/home/danieljunior/NetBeansProjects/fj21-agenda/src/java/mvc/servlet/ControllerServlet.java</file>
+            <file>file:/home/danieljr/NetBeansProjects/FJ21-JAVAWEB/src/java/mvc/logica/AdicionaContatoLogic.java</file>
+            <file>file:/home/danieljr/NetBeansProjects/FJ21-JAVAWEB/src/java/mvc/logica/AlteraContato.java</file>
+            <file>file:/home/danieljr/NetBeansProjects/FJ21-JAVAWEB/src/java/dao/ContatoDao.java</file>
+            <file>file:/home/danieljr/NetBeansProjects/FJ21-JAVAWEB/src/java/servlet/AdicionaContatoServlet.java</file>
+            <file>file:/home/danieljr/NetBeansProjects/FJ21-JAVAWEB/src/java/filtro/FiltroTempoDeExecucao.java</file>
+            <file>file:/home/danieljr/NetBeansProjects/FJ21-JAVAWEB/src/java/mvc/servlet/ControllerServlet.java</file>
+            <file>file:/home/danieljr/NetBeansProjects/FJ21-JAVAWEB/src/java/filtro/FiltroConexao.java</file>
+            <file>file:/home/danieljr/NetBeansProjects/FJ21-JAVAWEB/src/java/mvc/logica/RemoveContatoLogic.java</file>
+            <file>file:/home/danieljr/NetBeansProjects/FJ21-JAVAWEB/src/java/mvc/logica/AdicionaContato.java</file>
+            <file>file:/home/danieljr/NetBeansProjects/FJ21-JAVAWEB/web/adiciona-contato.jsp</file>
         </group>
     </open-files>
 </project-private>

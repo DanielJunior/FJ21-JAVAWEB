@@ -17,12 +17,13 @@ and open the template in the editor.
     </head>
     <body>
         <c:import url="cabecalho.jsp"/>
-        <form action="adicionaContato">
+        <form action="mvc">
             Nome:<input type="text" name="nome"/><br/>
             E-mail:<input type="text" name="email"/><br/>
             Endereço:<input type="text" name="endereco"/><br/>
             Data Nascimento:<caelum:campoData id="dataNascimento"/><br/>
 
+            <input type="hidden" name="logica" value="AdicionaContatoLogic"/>
             <input type="submit" value="Gravar"/>
         </form>
         <c:import url="rodape.jsp"/>

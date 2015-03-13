@@ -5,22 +5,25 @@
  */
 package mvc.logica;
 
-import javax.servlet.RequestDispatcher;
+import dao.ContatoDao;
+import java.sql.Connection;
+import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import modelos.Contato;
 
 /**
  *
- * @author danieljunior
+ * @author danieljr
  */
-public class PrimeiraLogica implements Logica {
+public class ListaContatosLogic implements Logica {
 
     @Override
     public String executa(HttpServletRequest req, HttpServletResponse res) throws Exception {
 
-        System.out.println("Executando a logica...");
-        System.out.println("Redirecionando pro JSP...");
-        return "primeira-logica.jsp";
+        List<Contato> contatos = new ContatoDao((Connection) req.getAttribute("conexao")).getLista();
+        req.setAttribute("contatos", contatos);
+        return "lista-contatos-elegante.jsp";
     }
 
 }

@@ -7,6 +7,7 @@
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.util.*, dao.*, modelos.*, factories.*, exceptions.*" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -33,7 +34,7 @@
                     <td><%=contato.getEmail()%></td>
                     <td><%=contato.getEndereco()%></td>
                     <td><%= new SimpleDateFormat("dd/MM/yyyy").format(contato.getDataNascimento().getTime())%></td>
-                    
+
                 </tr>
                 <% }%>
             </tbody>
